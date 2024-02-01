@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista zakupów</title>
+
+    <link rel="icon" href="./assets/icon-192.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="./manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <script src="./dexie.min.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js');
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <p>Lista zakupów</p>
+      <div id="totalPriceDiv"></div>
+    </nav>
+
+    <div class="container" id="container">
+      <div class="content">
+        <div id="itemAddDiv">
+          <form id="itemForm">
+            <label>
+              Nazwa produktu:
+              <input type="text" id="nameInput" required placeholder="">
+            </label>
+  
+            <label>
+              Ilość:
+              <input type="number" id="quantityInput" >
+            </label>
+  
+            <label>
+              Cena:
+              <input type="number" id="priceInput" placeholder="PLN">
+            </label>  
+  
+            <button type="submit" id="addItemButton">Dodaj do koszyka</button>
+          </form>
+        </div>
+        <div id="itemUpdateDiv"></div>
+        <div class="itemCon">
+          <div id="itemsDiv"></div>
+          <div class="itemConHeader">
+           <button id="clearAllButton" onclick="clearAllItems()"/>
+            Wyczyść koszyk
+            <img src="https://img.icons8.com/ios-filled/50/fa314a/clear-shopping-cart.png"/>           
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

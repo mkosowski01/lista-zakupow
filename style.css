@@ -1,0 +1,312 @@
+* {
+    margin: unset;
+    padding: unset;
+  }
+  
+  body {
+    background: #ffffff;
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+    font-family: 'Oswald', sans-serif;
+  }
+  
+  nav {
+    background: #06d318;
+    height: 4rem;
+    line-height: 3rem;
+    color: #ffffff;
+    padding: 0 12rem;
+    margin-bottom: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .container {
+    padding: 3rem 12rem;
+  }
+  
+  .content{
+    display: flex;
+    justify-content: space-between
+  }
+
+  
+  .itemConHeader{
+    display: flex;
+  }
+
+  #clearAllButton {
+    border: unset;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0 .5rem;
+  }
+
+  #clearAllButton img{
+    width: 25px;
+    height: 25px;
+    color: #ffffff
+  }
+
+  #itemForm label {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  #itemForm input {
+    height: 3.5rem;
+    text-align: center;
+    border: 1px solid #c5c5c5;
+    display: flex;
+    width: 16rem;
+    font-size: 1rem;
+    text-align: start;
+    padding: 0 0.2rem;
+    outline: none;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
+  }
+
+  #itemForm input:focus{
+    border: 1px solid #06d318;
+  }
+
+  #updateForm label {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  #updateForm input {
+    height: 3.5rem;
+    text-align: center;
+    border: 1px solid #bfbfbf;
+    display: flex;
+    width: 16rem;
+    font-size: 1rem;
+    text-align: start;
+    padding: 0 0.2rem;
+    outline: none;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
+  }
+  
+  #updateForm input:focus{
+    border: 1px solid #862a04;
+  }
+  
+  #addItemButton {
+    border: unset;
+    background: #06d318;
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 16.5rem;
+    height: 3rem;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  #editItemButton {
+    border: unset;
+    background: #862a04;
+    color: #fff;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 16.5rem;
+    height: 3rem;
+    border-radius: 3px;
+    font-size: 1rem;
+  }
+
+  .itemCon{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  .item {
+    width: 35rem;
+    margin: 0 auto 0 .5rem;
+    min-height: 2.8rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;  }
+  
+  .checkbox {
+    height: 60%;
+    width: 2.5rem;
+  }
+  
+  .itemInfo {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: cursive;
+  }
+
+  .itemChange{
+    text-align: end;
+    padding-right: .5rem;
+  }
+
+  .deleteButton {
+    border: unset;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .deleteButton img{
+    height: 40px;
+  }
+  
+  .deleteButton:active {
+    margin-top: 3px;
+  }
+
+  .editButton{
+    border: unset;
+    font-size: 0.8rem;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .editButton img{
+    height: 40px;
+  }
+  
+  .editButton:active {
+    margin-top: 3px;
+  }
+  
+  .purchased {
+    background: #ff0000;
+    color: #fff;
+  }
+  
+
+  #totalPriceDiv{
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  @media only screen and (max-width: 1025px) {
+
+    nav{
+      height: 3rem;
+      font-size: 1.2rem;
+      padding: 0 2rem;
+    }
+
+    .container {
+      padding: 1rem 2rem;
+    }
+
+    .content{
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #itemForm label{
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+    }
+
+    #itemForm input{
+      height: 2.5rem;
+      width: 14rem;
+    }
+
+    #updateForm label{
+      font-size: 1.1rem;
+      margin-bottom: .5rem;
+    }
+
+    #updateForm input{
+      height: 2.5rem;
+      width: 14rem;
+    }
+
+    #addItemButton{
+      width: 14.5rem;
+    }
+
+    #editItemButton {
+      width: 14.5rem;
+    }
+
+    .item{
+      max-width: 25rem;
+      padding: 0 .2rem;
+      margin: auto;
+    }
+
+    .checkbox{
+      height: 50%;
+    }
+
+    .itemInfo{
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .itemChange{
+      padding-right: 1.5rem;
+    }
+
+    .deleteButton{
+      padding: 0 .5rem;
+    }
+
+    #totalPriceDiv{
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  
+    #clearAllButton {
+        padding: 1rem 0;
+    }
+    .editButton, .deleteButton{
+      width: 1.2rem;
+    }
+    .editButton img{
+      width: 30px;
+      height: 30px;
+    }
+    .deleteButton img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 468px){
+    nav{
+      font-size: 1rem;
+      line-height: 1rem;
+      padding: 2rem;
+    }
+    .item{
+      max-width: 14rem;
+      margin: auto;
+    }
+  }
